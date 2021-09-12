@@ -25,7 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\CodeFix\CodeFix.csproj" />
+    <ProjectReference Include="..\src\SmartSnippets\SmartSnippets.csproj" />
   </ItemGroup>
 
 </Project>

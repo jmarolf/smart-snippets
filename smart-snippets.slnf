@@ -1,0 +1,10 @@
+{
+  "solution": {
+    "path": "smart-snippets.sln",
+    "projects": [
+      "src\\SmartSnippets.Package\\SmartSnippets.Package.csproj",
+      "src\\SmartSnippets\\SmartSnippets.csproj",
+      "tests\\SmartSnippets.Tests.csproj"
+    ]
+  }
+}

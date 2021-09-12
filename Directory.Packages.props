@@ -9,10 +9,12 @@
     <PackageVersion Include="Microsoft.CodeAnalysis.CSharp.CodeFix.Testing.XUnit" Version="1.1.1-beta1.21413.1" />
     <PackageVersion Include="Microsoft.CodeAnalysis.CSharp.CodeRefactoring.Testing.XUnit" Version="1.1.1-beta1.21413.1" />
     <PackageVersion Include="Microsoft.CodeAnalysis.CSharp.Workspaces" Version="3.11.0" />
+    <PackageVersion Include="Microsoft.CodeAnalysis.CSharp.Features" Version="3.11.0" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
     <PackageVersion Include="TunnelVisionLabs.ReferenceAssemblyAnnotator" Version="1.0.0-alpha.160" />
     <PackageVersion Include="xunit" Version="2.4.1" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="2.4.3" />
     <PackageVersion Include="Microsoft.SourceLink.GitHub" Version="1.0.0" />
+    <PackageVersion Include="Microsoft.VSSDK.BuildTools" Version="16.10.1055" />
   </ItemGroup>
 </Project>

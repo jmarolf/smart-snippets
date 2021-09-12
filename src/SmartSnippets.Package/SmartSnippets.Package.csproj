@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <PackageId>TypesShouldBeUpperCase</PackageId>
+    <PackageId>SmartSnippets.Package</PackageId>
     <PackageVersion>1.0.0.0</PackageVersion>
     <Authors>YOUR_NAME_HERE</Authors>
     <PackageLicenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</PackageLicenseUrl>
@@ -31,14 +31,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Analyzer\Analyzer.csproj" />
-    <ProjectReference Include="..\CodeFix\CodeFix.csproj" />
+    <ProjectReference Include="..\SmartSnippets\SmartSnippets.csproj" />
   </ItemGroup>
 
   <Target Name="_AddAnalyzersToOutput">
     <ItemGroup>
-      <TfmSpecificPackageFile Include="$(OutputPath)\Analyzer.dll" PackagePath="analyzers/dotnet/cs" />
-      <TfmSpecificPackageFile Include="$(OutputPath)\CodeFix.dll" PackagePath="analyzers/dotnet/cs" />
+      <TfmSpecificPackageFile Include="$(OutputPath)\SmartSnippets.dll" PackagePath="analyzers/dotnet/cs" />
     </ItemGroup>
   </Target>
 
