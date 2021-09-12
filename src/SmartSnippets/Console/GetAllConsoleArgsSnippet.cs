@@ -7,23 +7,24 @@ namespace Microsoft.CodeAnalysis.SmartSnippets
     using static SyntaxFactory;
 
     [ExportCompletionProvider(nameof(ReadConsoleSnippet), LanguageNames.CSharp)]
-    internal sealed class WriteConsoleSnippet : ConsoleSnippetBase
+    internal sealed class GetAllConsoleArgsSnippet : ConsoleSnippetBase
     {
         protected override CompletionItem GetCompletionItem()
-            => CompletionItem.Create("Write to the console");
+            => CompletionItem.Create("Loop through all provided commandline arguments");
 
         protected override SyntaxNode GetSnippet()
-        {
-            return ExpressionStatement(
+            => ForEachStatement(
+                PredefinedType(
+                    Token(SyntaxKind.StringKeyword)),
+                Identifier("argument"),
                 InvocationExpression(
                     MemberAccessExpression(
                         SyntaxKind.SimpleMemberAccessExpression,
                         MemberAccessExpression(
                             SyntaxKind.SimpleMemberAccessExpression,
                             IdentifierName("System"),
-                            IdentifierName("Console")),
-                        IdentifierName("WriteLine"))));
-            // TODO: grab data in scope and populate the Console.WriteLine call
-        }
+                            IdentifierName("Environment")),
+                        IdentifierName("GetCommandLineArgs"))),
+                Block());
     }
 }

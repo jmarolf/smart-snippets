@@ -2,13 +2,14 @@
 
 using Microsoft.CodeAnalysis.Completion;
 
-
 namespace Microsoft.CodeAnalysis.SmartSnippets
 {
-    internal abstract class SnippetInsideMethod : SmartSnippet
+    internal abstract class ConsoleSnippetBase : SnippetInsideMethod
     {
-
         protected override async Task<bool> ShouldProvideCompletionsAsync(CompletionContext context)
-            => await context.IsInMethodBodyAsync(context.CancellationToken).ConfigureAwait(false);
+        {
+            return (await base.ShouldProvideCompletionsAsync(context).ConfigureAwait(false)) &&
+                context.IsInConsoleApp();
+        }
     }
 }
