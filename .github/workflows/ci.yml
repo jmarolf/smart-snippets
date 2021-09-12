@@ -21,8 +21,6 @@ jobs:
           fetch-depth: 0
       - name: Setup .NET
         uses: actions/setup-dotnet@v1.8.1
-        with:
-          dotnet-version: 5.0.400
       - name: Try get cached dependencies
         uses: actions/cache@v2.1.4
         with:
